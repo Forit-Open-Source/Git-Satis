@@ -1,0 +1,37 @@
+{
+    "name": "forit/git-satis",
+    "description": "Satis-like tool for generating repositories from Git",
+    "type": "project",
+    "require": {
+        "php": "^7.2",
+        "gitonomy/gitlib": "^1.2",
+        "symfony/console": "^5.1"
+    },
+    "require-dev": {
+        "jangregor/phpstan-prophecy": "^0.8.0",
+        "phpunit/phpunit": "^8.5",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan": "^0.12.25",
+        "phpstan/phpstan-doctrine": "^0.12.13",
+        "phpstan/phpstan-phpunit": "^0.12.8",
+        "sirbrillig/phpcs-variable-analysis": "^2.8.1",
+        "squizlabs/php_codesniffer": "^3.5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Forit\\GitSatis\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Forit\\GitSatisTest\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Łukasz Rutkowski",
+            "email": "lukasz-rutkowski@outlook.com"
+        }
+    ]
+}
