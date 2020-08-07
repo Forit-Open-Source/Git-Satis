@@ -3,3 +3,4 @@ tools/
 vendor/
 *.cache
 git-satis.phar
+box.phar

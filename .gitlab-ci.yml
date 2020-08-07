@@ -1,0 +1,14 @@
+stages:
+- build
+
+build:
+  image: php:7.2
+  script:
+   - apt update && apt install -y zlib1g-dev libzip-dev && docker-php-ext-install zip
+   - curl -L https://getcomposer.org/composer-stable.phar --output /usr/local/bin/composer && chmod +x /usr/local/bin/composer
+   - composer install
+   - curl -L https://github.com/humbug/box/releases/download/3.8.5/box.phar --output /usr/local/bin/box && chmod +x /usr/local/bin/box
+   - box compile
+  artifacts:
+    paths:
+      - git-satis.phar
