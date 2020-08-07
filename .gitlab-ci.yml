@@ -1,7 +1,8 @@
 stages:
 - build
 
-build:
+build-phar:
+  stage: build
   image: php:7.2
   script:
    - apt update && apt install -y zlib1g-dev libzip-dev && docker-php-ext-install zip
